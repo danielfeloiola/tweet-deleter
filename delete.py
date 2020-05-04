@@ -21,11 +21,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-# cria um usuario
-me = api.get_user(user)._json
-
 # pega a timeline do usuário
-timeline = api.user_timeline(me, count=20)
+timeline = api.user_timeline(user, count=3000)
 
 # passa pelos tweets e deleta todos
 for tweet in timeline:
