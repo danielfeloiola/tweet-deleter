@@ -1,7 +1,10 @@
-##############################
-# Acessando a API do Twitter
-# E deletando velharias
-##############################
+##############################################################
+# Deletando tweets semanalmente
+# Deleting tweets weekly
+#
+# Requer uma chave da API / Needs an API key
+##############################################################
+
 
 #importanto as bibliotecas
 import schedule
@@ -20,7 +23,7 @@ def delete():
     # pega o usuario do env
     user = os.getenv('USER')
 
-    # authenticate
+    # auth
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
