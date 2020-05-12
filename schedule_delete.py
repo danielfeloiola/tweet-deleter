@@ -13,6 +13,7 @@ import tweepy
 import os
 
 def delete():
+    print("STARTING DELETION")
 
     # pegas as chaves
     consumer_key = os.getenv("CONSUMER_KEY")
@@ -37,7 +38,8 @@ def delete():
         api.destroy_status(tweet.id)
 
 # repete a tarefa todas as segundas
-schedule.every().monday.do(delete)
+schedule.every().day.at("14:15").do(delete)
+#schedule.every().tuesday.do(delete)
 
 # roda permanentemente
 while True:
