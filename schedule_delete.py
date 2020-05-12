@@ -14,7 +14,7 @@ import os
 
 def delete():
     print("STARTING DELETION")
-    print(time.now)
+    print(time.now())
 
     # pegas as chaves
     consumer_key = os.getenv("CONSUMER_KEY")
@@ -39,9 +39,10 @@ def delete():
         api.destroy_status(tweet.id)
 
 # repete a tarefa diariamente as 14:15
-schedule.every().day.at("14:25").do(delete)
+schedule.every().day.at("14:35").do(delete)
 
 # roda permanentemente
 while True:
     schedule.run_pending()
     time.sleep(60)
+    print(time.now())
