@@ -43,6 +43,5 @@ schedule.every().day.at("07:00").do(delete)
 
 # roda permanentemente
 while True:
-    print(datetime.now())
     schedule.run_pending()
     time.sleep(60)
