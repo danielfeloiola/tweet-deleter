@@ -7,6 +7,7 @@
 
 
 #importanto as bibliotecas
+from datetime import datetime
 import schedule
 import time
 import tweepy
@@ -14,7 +15,7 @@ import os
 
 def delete():
     print("STARTING DELETION")
-    print(time.now())
+    print(datetime.now())
 
     # pegas as chaves
     consumer_key = os.getenv("CONSUMER_KEY")
@@ -45,4 +46,3 @@ schedule.every().day.at("14:35").do(delete)
 while True:
     schedule.run_pending()
     time.sleep(60)
-    print(time.now)
