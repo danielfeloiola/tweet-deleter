@@ -45,4 +45,4 @@ schedule.every().day.at("14:35").do(delete)
 while True:
     schedule.run_pending()
     time.sleep(60)
-    print(time.now())
+    print(time.now)
