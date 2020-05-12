@@ -14,6 +14,7 @@ import os
 
 def delete():
     print("STARTING DELETION")
+    print(time.now)
 
     # pegas as chaves
     consumer_key = os.getenv("CONSUMER_KEY")
