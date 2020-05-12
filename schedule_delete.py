@@ -39,7 +39,7 @@ def delete():
         api.destroy_status(tweet.id)
 
 # repete a tarefa diariamente as 14:15
-schedule.every().day.at("14:20").do(delete)
+schedule.every().day.at("14:25").do(delete)
 
 # roda permanentemente
 while True:
